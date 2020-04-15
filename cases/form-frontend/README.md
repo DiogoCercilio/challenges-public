@@ -16,7 +16,6 @@ Esta pasta contém a API necessária para o desenvolvimento do projeto. Para sub
 
 - HTML (deixe o mais semântico possível)
 - CSS (pré-processador opcional)
-- JS (React + Redux ou Mobx)
 - Responsivo
 - Testar as principais funcionalidades
 
