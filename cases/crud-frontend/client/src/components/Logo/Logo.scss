@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    padding: 20px 0;
+    max-width: 100%;
+
+    &-small {
+        width: 100px
+    }
+
+    &-normal {
+        width: 300px
+    }
+
+    &-large {
+        width: 300px
+    }
+
+    &-full {
+        width: 100%
+    }
+}
