@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Button from '../Button/Button'
 import FormInput from '../Form/FomInput'
-import FormRules from '../Form/FormRules'
+import FormHelper from '../../helpers/FormHelper'
 import GenderOptions from '../Form/GenderOptions'
 
 export default function ListAddUserForm({ onAdd, onCancel }: any) {
@@ -23,7 +23,7 @@ export default function ListAddUserForm({ onAdd, onCancel }: any) {
     const onSubmit = (e: any)=> {
         try {
             e.preventDefault()
-            return FormRules.isFormValid(user) && 
+            return FormHelper.isFormValid(user) && 
             onAdd(user)
         } catch(err) {
             alert(err)
@@ -32,7 +32,7 @@ export default function ListAddUserForm({ onAdd, onCancel }: any) {
 
     useEffect(()=> {
         setUser({...user, avatar: `${imgUrl}/${gender}/87.jpg`})
-    }, [gender])
+    }, [gender, imgUrl])
 
     return (
         <form id="add-user-form" className="list-users-add-user-form" autoComplete="off" role="presentation">

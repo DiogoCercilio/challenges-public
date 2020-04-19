@@ -8,7 +8,7 @@ export default function AccordeonItem({ item, onDropUserHandler, onSubmitEdit }:
     return (
         <div className={`accordeon-item ${visible ? 'active' : ''}`}>
             <div className="accordeon-item-title" onClick={e=> setVisible(!visible)}>
-                <img className="accordeon-item-content-image" width="50" height="50" src={item.avatar}/>
+                <img className="accordeon-item-content-image" width="50" height="50" src={item.avatar} alt={item.name} />
                 <small>ID: {item.id} -</small> {item.name}
             </div>
             

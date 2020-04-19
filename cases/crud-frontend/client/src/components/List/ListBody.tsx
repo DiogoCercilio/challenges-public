@@ -34,7 +34,7 @@ export default function ListBody() {
         userService.dropUser(id)
             .then((response: any)=> {
                 if (response.status === 200) {
-                    setUsers(users.filter((user: IUser)=> user.id != id))
+                    setUsers(users.filter((user: IUser)=> user.id !== id))
                     showMsg(MESSAGES.SUCCESS_DELETED)
                 } else {
                     throw MESSAGES.ERROR_DELETING
@@ -47,7 +47,7 @@ export default function ListBody() {
         userService.editUser(editedUser)
             .then((response: any)=> {
                 if (response.status === 200) {
-                    const usersWithoutEdited = users.filter((user: IUser)=> user.id != editedUser.id)
+                    const usersWithoutEdited = users.filter((user: IUser)=> user.id !== editedUser.id)
                     setUsers(ListHelper.getSorted(ListHelper.appendUser(usersWithoutEdited, editedUser), ordenation.order, ordenation.sort))
                     showMsg(MESSAGES.SUCCESS_EDITED)
                 } else {

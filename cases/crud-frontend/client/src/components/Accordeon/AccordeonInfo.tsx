@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import AccordeonActions from './AccordeonActions'
 import Button from '../Button/Button'
 import AccordeonInfoItem from './AccordeonInfoItem'
-import FormRules from '../Form/FormRules'
+import FormHelper from '../../helpers/FormHelper'
 
 export default function AccordeonInfo({ item, onDropUserHandler, onSubmitEdit }: any) {
     
@@ -11,7 +11,7 @@ export default function AccordeonInfo({ item, onDropUserHandler, onSubmitEdit }:
 
     const onSubmit = (e: any)=> {
         try {
-            return FormRules.isFormValid(updated) && onSubmitEdit(updated)
+            return FormHelper.isFormValid(updated) && onSubmitEdit(updated)
         } catch(err) {
             alert(err)
         }
