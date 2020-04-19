@@ -1,0 +1,26 @@
+.btn {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #fff;
+    padding: 10px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: none;
+        border: 1px solid #3498db;
+    }
+
+    &.btn-primary {
+        border-color: #3498db;
+        background-color: #3498db;
+    }
+
+    &.btn-lined {
+        border-color: $primary;
+        color: $primary;
+        background-color: transparent;
+    }
+}
