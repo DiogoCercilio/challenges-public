@@ -22,13 +22,10 @@ cd crud-frontend
 ### Install / run the API
 ```shell
 cd server
-
-npm install
-// or if you are using yarn
+// Installing...
 yarn
 
-npm start 
-// or if you are using yarn
+// Runnig the application...
 yarn start
 ```
 
@@ -40,13 +37,9 @@ Go to http://localhost:9004/users. The API must be running.
 cd client
 
 // Installing...
-npm install
-// or if you are using yarn
 yarn
 
 // Runnig the application...
-npm start 
-// or if you are using yarn
 yarn start
 ```
 
@@ -54,18 +47,26 @@ Go to http://localhost:9004/users. The API must be running.
 
 ### Run the tests (Frontend)
 
+#### Unit tests
 ```shell
 cd client
 
 // Installing...
-npm install
-// or if you are using yarn
 yarn
 
 // Running the tests
-npm test 
-// or if you are using yarn
 yarn test
+```
+
+#### E2E Test
+```shell
+cd client
+
+// Installing...
+yarn
+
+// Running the tests
+yarn e2e
 ```
 
 ## Developing
@@ -75,3 +76,4 @@ React (create-react-app) - v16.13.1
 Typescript - 3.7.2
 React-toastify - 5.5.0
 Jest-dom - 4.2.4
+Cypress - 4.4.0
