@@ -67,7 +67,11 @@ O guia fornece uma sugestão de design mas não deve limitar a criatividade. O i
 
 ## Desenvolvimento
 
-Faça um fork deste repositório. Faça commits relevantes. Vamos analisar as mensagens usadas nos *commits* assim como o conteúdo de cada *commit*. A idéia é que cada *commit* seja tratado como se fosse um *Pull Request* (PR). PRs (*commits*) não podem ser muito grandes e nem ter código não relacionado com a mensagem.
+Clone este repositório em sua máquina de desenvolvimento. Faça commits relevantes. Vamos analisar as mensagens usadas nos *commits* assim como o conteúdo de cada *commit*. A idéia é que cada *commit* seja tratado como se fosse um *Pull Request* (PR). Os *commits* não podem ser muito grandes e nem ter código não relacionado com a mensagem.
+
+Para submeter sua solução, compacte a pasta raiz e nos envie por e-mail. Caso prefira, você pode subir sua solução em um repositório privado e convidar o avaliador para visualizar (neste caso, nos pergunte qual o endereço de e-mail do avaliador).
+
+Não exponha publicamente sua solução na internet.
 
 ## Copyright
 
