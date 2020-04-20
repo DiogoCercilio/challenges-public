@@ -1,12 +1,11 @@
 import ListHelper from './ListHelper';
-import IUser from '../components/Form/IUser';
 
 export const jestConf = true
 
 it("should test append user", ()=> {
-    const mockUser = [{id: 1, name: 'John'} as IUser, {id: 2, name: 'Mary'} as IUser]
+    const mockUser = [{id: 1, name: 'John'} as any, {id: 2, name: 'Mary'} as any]
     
-    expect(ListHelper.appendUser(mockUser, {id: 3, name: 'Joseph'} as IUser))
+    expect(ListHelper.appendUser(mockUser, {id: 3, name: 'Joseph'} as any))
     .toEqual([{id: 1, name: 'John'}, {id: 2, name: 'Mary'}, {id: 3, name: 'Joseph'}]);
 })
 
