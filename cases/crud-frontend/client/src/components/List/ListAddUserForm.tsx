@@ -9,11 +9,11 @@ export default function ListAddUserForm({ onAdd, onCancel }: any) {
     const imgUrl = `https://randomuser.me/api/portraits`
     const [ gender, setGender ]: any = useState('men')
     const [ user, setUser ] = useState({
-        name: 'Camila Moura',
-        username: 'camilamoura',
-        phone: '(12) 98222-3333',
-        email: 'camarques@gmail.com',
-        avatar: `${imgUrl}/${gender}/87.jpg`
+        name: '',
+        username: '',
+        phone: '',
+        email: '',
+        avatar: ''
     })
 
     const getGender = (e: any)=> {
