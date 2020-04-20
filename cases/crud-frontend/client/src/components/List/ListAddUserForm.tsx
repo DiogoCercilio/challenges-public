@@ -23,11 +23,15 @@ export default function ListAddUserForm({ onAdd, onCancel }: any) {
     const onSubmit = (e: any)=> {
         try {
             e.preventDefault()
-            return FormHelper.isFormValid(user) && 
+            const formRules: any = FormHelper.isFormValid(user)
+
+            if (formRules.error) {
+                throw new Error(formRules.error)
+            }
             onAdd(user)
         } catch(err) {
             alert(err)
-        }
+        }      
     }
 
     useEffect(()=> {

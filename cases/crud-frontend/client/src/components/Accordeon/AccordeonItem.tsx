@@ -17,7 +17,10 @@ export default function AccordeonItem({ item, onDropUserHandler, onSubmitEdit }:
                     <AccordeonInfo 
                         item={item} 
                         onDropUserHandler={onDropUserHandler}
-                        onSubmitEdit={onSubmitEdit}
+                        onSubmitEdit={(updated)=> {
+                            setVisible(false)
+                            onSubmitEdit(updated)}
+                        }
                     />
                 </div>
             }

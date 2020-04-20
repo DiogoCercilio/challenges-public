@@ -47,8 +47,8 @@ export default class FormRules {
                 FormRules.emailIsvalid(user.email) && 
                 FormRules.phoneIsValid(user.phone) && 
                 FormRules.avatarIsValid(user.avatar)
-        } catch(err) {
-            console.error(err)
+        } catch(error) {
+            return { error }
         }
     }    
 }
