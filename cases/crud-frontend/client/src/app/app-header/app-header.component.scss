@@ -1,0 +1,16 @@
+.app-header {
+    justify-content: center;
+    margin: 30px 0;   
+    
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        width: 300px; // Em uma situacao real eu nao ajustaria a imagem, mas sim usaria já tratada
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 40px;
+    }
+}
