@@ -1,0 +1,22 @@
+<main>
+  <div class="container">
+    <app-header (onAddUser)="isAdding = $event">
+    </app-header>  
+    <app-list 
+      [users]="users" 
+      [editing]="editElement" 
+      (onDrop)="drop($event)" 
+      (onEdit)="isEditing = true; editElement=$event"
+    >
+    </app-list>
+    <app-modal 
+      [editElement]="editElement" 
+      [isEditing]="isEditing" 
+      [isAdding]="isAdding" 
+      [newUser]="newUser" 
+      (onEdit)="edit($event)"
+      (onAdd)="add($event)"
+      (onClose)="reset()"
+    ></app-modal>
+  </div>
+</main>
