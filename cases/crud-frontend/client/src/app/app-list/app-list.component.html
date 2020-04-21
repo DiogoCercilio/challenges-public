@@ -1,0 +1,38 @@
+<div class="accordeon">
+  <ng-template ngFor let-item [ngForOf]="users" let-i="index">
+      <div class="accordeon-item">
+          <div class="accordeon-item-title" (click)="visible = visible === i ? null : i">
+              <img class="accordeon-item-title-avatar" [src]="item.avatar" />
+              {{item.id}} - {{item.name}}
+          </div>
+          <div class="accordeon-item-content" [ngClass]="{ 'active' : visible === i }">
+              <div class="accordeon-item-content-block">
+                  <strong>Name</strong>
+                  {{item.name}}
+              </div>
+              <div class="accordeon-item-content-block">
+                  <strong>Username</strong>
+                  {{item.username}}
+              </div>
+              <div class="accordeon-item-content-block">
+                  <strong>Phone</strong>
+                  {{item.phone}}
+              </div>
+              <div class="accordeon-item-content-block">
+                  <strong>Email</strong>
+                  {{item.email}}
+              </div>
+              <div class="accordeon-item-content-block">
+                <ul>
+                  <li (click)="openEdit(item)">
+                    Edit
+                  </li>
+                  <li (click)="drop(item.id)">
+                    Delete
+                  </li>
+                </ul>          
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</div>
