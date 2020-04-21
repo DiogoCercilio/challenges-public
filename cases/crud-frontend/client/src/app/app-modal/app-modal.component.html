@@ -1,0 +1,43 @@
+<div [className]="isEditing || isAdding ? 'app-modal active' : 'app-modal'">
+  <div class="app-modal-content">
+    <h4>{{isAdding ? 'Add' : 'Edit user'}}</h4>
+
+    <div class="row p-margin-bottom-1">
+      <label for="name">Name</label>
+      <input type="text" [value]="editElement.name || ''" [(ngModel)]="newUser.name" />
+    </div>
+
+    <div class="row p-margin-bottom-1">
+      <label for="username">Username</label>
+      <input type="text" [value]="editElement.username || ''" [(ngModel)]="newUser.username" />
+    </div>
+
+    <div class="row p-margin-bottom-1">
+      <label for="email">Email</label>
+      <input type="text" [value]="editElement.email || ''" [(ngModel)]="newUser.email" />
+    </div>
+    
+    <div class="row p-margin-bottom-1">
+      <label for="phone">Phone</label>
+      <input type="text" [value]="editElement.phone || ''" [(ngModel)]="newUser.phone" />
+    </div>
+
+    <div class="row p-margin-bottom-1">
+      <label for="avatar">Gender</label>
+      <div>
+        <label for="gender">Man</label>
+        <input type="radio" name="gender" value="men" [(ngModel)]="gender" />
+        
+        <label for="gender">Woman</label>
+        <input type="radio" name="gender" value="women" [(ngModel)]="gender" />
+      </div>
+    </div>
+
+    <div class="row p-margin-top-3 app-modal-content-submit">
+      <input type="hidden" [value]="editElement.id || ''" [(ngModel)]="newUser.id" />
+
+      <button class="btn btn-primary p-margin-right-1" type="submit" (click)="isAdding ? add(newUser, gender) : edit(newUser, editElement, gender)">Save</button> 
+      <button class="btn btn-primary-lined" (click)="onCloseModal()">Cancel</button> 
+    </div>
+  </div>
+</div>
